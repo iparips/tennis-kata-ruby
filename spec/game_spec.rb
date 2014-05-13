@@ -1,7 +1,6 @@
 require 'rspec'
 require 'game'
 
-
 describe Game do
 
   let(:g) { Game.new }
@@ -41,6 +40,11 @@ describe Game do
     it 'advantage 2' do
       g.play([1,1,1,1,2,2,2,2,2])
       expect(g.score).to eq(['adv 2'])
+    end
+
+    it '1 wins after duce' do
+      g.play([1,1,1,1,1,1,2,2,2,2])
+      expect(g.score).to eq(['won', 'lost'])
     end
 
   end

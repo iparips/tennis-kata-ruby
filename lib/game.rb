@@ -14,7 +14,6 @@ class Game
   end
 
   def score
-
     if (@p1_points_won >= 3 && @p2_points_won >= 3)
       score_duce
     else
@@ -25,7 +24,14 @@ class Game
   private
 
   def score_duce
-    if (@p1_points_won == @p2_points_won) && (@p1_points_won >= 3)
+
+    if (@p1_points_won - @p2_points_won).abs > 1
+      if @p1_points_won > @p2_points_won
+        ['won', 'lost']
+      elsif @p1_points_won < @p2_points_won
+        ['lost', 'won']
+      end
+    elsif(@p1_points_won == @p2_points_won) && (@p1_points_won >= 3)
       ['duce']
     elsif @p1_points_won > @p2_points_won
       ['adv 1']

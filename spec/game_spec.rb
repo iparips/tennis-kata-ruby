@@ -24,6 +24,12 @@ describe Game do
       expect(g.score).to eq(['lost', 'won'])
     end
 
+    it 'mixed score' do
+      g = Game.new
+      g.play([1,1,2,2])
+      expect(g.score).to eq([30, 30])
+    end
+
   end
 
 end

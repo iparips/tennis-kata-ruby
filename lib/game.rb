@@ -14,14 +14,26 @@ class Game
   end
 
   def score
-    if ((@p1_points_won == @p2_points_won) && (@p1_points_won >= 3) )
-      ['duce']
+
+    if (@p1_points_won >= 3 && @p2_points_won >= 3)
+      score_duce
     else
       score_end_game
     end
   end
 
   private
+
+  def score_duce
+    if (@p1_points_won == @p2_points_won) && (@p1_points_won >= 3)
+      ['duce']
+    elsif @p1_points_won > @p2_points_won
+      ['adv 1']
+    elsif @p1_points_won < @p2_points_won
+      ['adv 2']
+    end
+
+  end
 
   def score_end_game
     p1_score = SCORECARD[@p1_points_won.to_s]

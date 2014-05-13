@@ -33,6 +33,16 @@ describe Game do
       expect(g.score).to eq(['duce'])
     end
 
+    it 'advantage 1' do
+      g.play([1,1,1,1,2,2,2])
+      expect(g.score).to eq(['adv 1'])
+    end
+
+    it 'advantage 2' do
+      g.play([1,1,1,1,2,2,2,2,2])
+      expect(g.score).to eq(['adv 2'])
+    end
+
   end
 
 end

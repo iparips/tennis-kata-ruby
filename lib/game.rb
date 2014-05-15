@@ -14,14 +14,13 @@ class Game
   end
 
   def score
-    # if @p1_points_won >= 3 && @p2_points_won >= 3
-    #   score_duce
-    # elsif @p1_points_won >= 3 || @p2_points_won >= 3
-    #   score_end_game
-    # else
-    #   mid_game_score
-    # end
-    0
+    if @p1_points_won >= 3 && @p2_points_won >= 3
+      score_duce
+    elsif @p1_points_won >= 3 || @p2_points_won >= 3
+      score_end_game
+    else
+      mid_game_score
+    end
   end
 
   private

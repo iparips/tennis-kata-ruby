@@ -13,6 +13,6 @@ git clean -fd
 rm -rf .bundle/
 
 bundle install --retry 3
-bundle exec rspec
+bundle exec rake --trace $@
 
 

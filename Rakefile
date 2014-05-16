@@ -8,4 +8,4 @@ task :coverage do
   `rake spec COVERAGE=true`
 end
 
-task :default  => :spec
+task :default  => :coverage

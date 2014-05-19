@@ -28,7 +28,7 @@ class Game
   def score_duce
     if (@p1_points_won - @p2_points_won).abs > 1
       score_end_game
-    elsif (@p1_points_won == @p2_points_won) && (@p1_points_won >= 3)
+    elsif (@p1_points_won == @p2_points_won)
       ['duce']
     elsif @p1_points_won > @p2_points_won
       ['adv 1']

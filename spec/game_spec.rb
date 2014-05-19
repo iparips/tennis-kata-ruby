@@ -9,7 +9,6 @@ describe Game do
 
     it 'returns 0 at start of the game' do
       g.play([])
-      sleep(10)
       expect(g.score).to eq([0, 0])
     end
 
